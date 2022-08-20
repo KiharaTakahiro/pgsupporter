@@ -1,4 +1,4 @@
-from main import Transaction
+from .main import Transaction
 from abc import ABC, abstractclassmethod
 from enum import Enum
 
