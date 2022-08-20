@@ -149,7 +149,8 @@ class Transaction(object):
 
   def __exit__(self, exc_type, exc_value, traceback):
     self.close(exc_type is None)
-    raise Exception(f'トランザクションで例外が発生しました。エラーの種類: {exc_type}\nエラーの値: {exc_value}\n{traceback}')
+    if exc_type is not None:
+      raise Exception(f'トランザクションで例外が発生しました。エラーの種類: {exc_type}\nエラーの値: {exc_value}\n{traceback}')
 
 def start_transaction(read_only=True, schema:str=None, connector: DbConnecter=None):
   """ トランザクションの開始

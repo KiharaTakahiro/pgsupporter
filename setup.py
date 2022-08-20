@@ -5,7 +5,7 @@ requires = ["psycopg2>=2.8.6"]
 
 setup(
     name='pgsupporter',
-    version='1.0.1',
+    version='1.0.2',
     description='pgsupporter',
     url='https://github.com/KiharaTakahiro/pgsupporter/tree/main',
     author='Takahiro Kihara',
